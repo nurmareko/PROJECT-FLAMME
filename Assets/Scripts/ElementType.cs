@@ -1,0 +1,1 @@
+public enum ElementType { Fire, Water, Earth, Wind, Plant }
