@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="back_card" size="1.000000 1.500000" />
+    <ImageTarget name="plant_card" size="1.000000 1.500000" />
+    <ImageTarget name="earth_card" size="1.000000 1.500000" />
+    <ImageTarget name="water_card" size="1.000000 1.500000" />
+    <ImageTarget name="fire_card" size="1.000000 1.500000" />
+    <ImageTarget name="wind_card" size="1.000000 1.500000" />
+  </Tracking>
+</QCARConfig>
