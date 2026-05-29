@@ -14,9 +14,8 @@ public class ElementCard : MonoBehaviour
 
     void OnStatusChanged(ObserverBehaviour behaviour, TargetStatus status)
     {
-        bool tracked = status.Status == Status.TRACKED
-                    || status.Status == Status.EXTENDED_TRACKED;
-        if (tracked) CombinationManager.Instance.CardDetected(element);
+        bool present = status.Status == Status.TRACKED;
+        if (present) CombinationManager.Instance.CardDetected(element, transform);
         else         CombinationManager.Instance.CardLost(element);
     }
 }

@@ -965,6 +965,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22c391249724bd62871ae3f918ec808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombinationManager
+  combinations:
+  - elementA: 0
+    elementB: 1
+    resultName: Steam
+    explanation: When water is heated, it turns into steam, a gas of tiny water droplets
+      in the air. This is called evaporation.
+    resultPrefab: {fileID: 3736977348899088329, guid: ee8081a47bd6cb1528155c53eac1f74f,
+      type: 3}
+  - elementA: 0
+    elementB: 2
+    resultName: Lava
+    explanation: Intense heat melts solid rock into molten lava. When lava cools,
+      it hardens into new igneous rock.
+    resultPrefab: {fileID: 2243177891237033210, guid: 236dc0072751c9c639f5cc4fe9aa0850,
+      type: 3}
+  - elementA: 0
+    elementB: 3
+    resultName: Fire Tornado
+    explanation: When fire meets strong swirling wind, it can form a spinning column
+      of flame, a real phenomenon called a fire whirl.
+    resultPrefab: {fileID: 7075986561276526749, guid: 2b98dff790db1423c907556d02aada9a,
+      type: 3}
+  - elementA: 0
+    elementB: 4
+    resultName: Ash
+    explanation: When a plant burns, fire breaks it down into a soft grey powder
+      called ash, which returns nutrients to the soil.
+    resultPrefab: {fileID: 8794139404063816738, guid: 830f1e24e90a736f9bfc49e108013cc8,
+      type: 3}
+  - elementA: 1
+    elementB: 2
+    resultName: Mud
+    explanation: When water mixes with soil, it fills the spaces between dirt particles,
+      making soft, squishy mud.
+    resultPrefab: {fileID: 6485002588018696519, guid: 4881b5c13ffbb57d295d6b78cec2882e,
+      type: 3}
+  - elementA: 1
+    elementB: 3
+    resultName: Waves
+    explanation: When wind blows across water, it pushes the surface and creates
+      waves. Stronger wind makes bigger waves.
+    resultPrefab: {fileID: 2095340625350273121, guid: 4a181ca4af902fe74a5e19d8cb7dc788,
+      type: 3}
+  - elementA: 1
+    elementB: 4
+    resultName: Sprout
+    explanation: Plants need water to grow. When a seed gets water, it sprouts its
+      first tiny stem and leaves.
+    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
+      type: 3}
+  - elementA: 2
+    elementB: 4
+    resultName: Tree
+    explanation: With rich soil to grow in, a plant grows tall and strong into a
+      tree. Soil provides nutrients and anchors its roots.
+    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
+      type: 3}
 --- !u!4 &829667729
 Transform:
   m_ObjectHideFlags: 0
