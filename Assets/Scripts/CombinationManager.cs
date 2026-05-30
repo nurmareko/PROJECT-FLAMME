@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CombinationManager : MonoBehaviour
 {
+    [Header("UI")]
+    public TextMeshProUGUI feedbackText;
     public static CombinationManager Instance;
 
     [Header("Configure all valid combinations here")]
@@ -23,7 +26,7 @@ public class CombinationManager : MonoBehaviour
 
         var keys = new List<ElementType>(active.Keys);
         string pairKey = PairKey(keys[0], keys[1]);
-        if (pairKey == currentPairKey) return; // same pair already handled
+        if (pairKey == currentPairKey) return;
 
         ClearResult();
         currentPairKey = pairKey;
@@ -31,8 +34,7 @@ public class CombinationManager : MonoBehaviour
         var combo = FindCombination(keys[0], keys[1]);
         if (combo == null)
         {
-            Debug.Log($"No reaction: {keys[0]} + {keys[1]}");
-            // TODO: show "these don't react" UI
+            ShowFeedback("These elements don't react with each other.");
             return;
         }
 
@@ -40,8 +42,27 @@ public class CombinationManager : MonoBehaviour
         if (combo.resultPrefab != null)
             currentResult = Instantiate(combo.resultPrefab, mid, Quaternion.identity);
 
-        Debug.Log($"Result: {combo.resultName}");
-        // TODO: show result name + Info button (Week 3)
+        ShowFeedback(combo.resultName);
+    }
+
+    void ShowFeedback(string msg)
+    {
+        if (feedbackText == null) return;
+        feedbackText.text = msg;
+        feedbackText.gameObject.SetActive(true);
+    }
+
+    void HideFeedback()
+    {
+        if (feedbackText != null) feedbackText.gameObject.SetActive(false);
+    }
+
+    void ClearResult()
+    {
+        if (currentResult != null) Destroy(currentResult);
+        currentResult = null;
+        currentPairKey = "";
+        HideFeedback();
     }
 
     void Update()
@@ -62,13 +83,6 @@ public class CombinationManager : MonoBehaviour
         foreach (var c in combinations)
             if (c.Matches(a, b)) return c;
         return null;
-    }
-
-    void ClearResult()
-    {
-        if (currentResult != null) Destroy(currentResult);
-        currentResult = null;
-        currentPairKey = "";
     }
 
     string PairKey(ElementType a, ElementType b)
