@@ -53,7 +53,7 @@ public class CombinationManager : MonoBehaviour
         {
             currentCombo = null;
             if (infoButton != null) infoButton.gameObject.SetActive(false);
-            ShowFeedback("These elements don't react with each other.");
+            ShowFeedback("Elemen-elemen ini tidak bergabung menjadi sesuatu yang baru.");
             return;
         }
 
