@@ -1,33 +1,55 @@
 using UnityEngine;
+using System.Collections;
 
 public class ScreenManager : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject aboutPanel;
     public GameObject scannerHUD;
+    [SerializeField] private float buttonAnimationDelay = 0.33f;
 
-    void Start() => ShowMainMenu();
+    private Coroutine screenChangeCoroutine;
+
+    void Start() => ChangeScreen(mainMenuPanel);
 
     public void ShowMainMenu()
     {
         Debug.Log("game started");
-        mainMenuPanel.SetActive(true);
-        aboutPanel.SetActive(false);
-        scannerHUD.SetActive(false);
+        StartDelayedScreenChange(mainMenuPanel);
     }
 
     public void ShowScanner()
     {
-        mainMenuPanel.SetActive(false);
-        aboutPanel.SetActive(false);
-        scannerHUD.SetActive(true);
+        StartDelayedScreenChange(scannerHUD);
     }
 
     public void ShowAbout()
     {
         Debug.Log("about button clicked");
-        mainMenuPanel.SetActive(false);
-        aboutPanel.SetActive(true);
-        scannerHUD.SetActive(false);
+        StartDelayedScreenChange(aboutPanel);
+    }
+
+    private void StartDelayedScreenChange(GameObject targetPanel)
+    {
+        if (screenChangeCoroutine != null)
+        {
+            StopCoroutine(screenChangeCoroutine);
+        }
+
+        screenChangeCoroutine = StartCoroutine(ChangeScreenAfterDelay(targetPanel));
+    }
+
+    private IEnumerator ChangeScreenAfterDelay(GameObject targetPanel)
+    {
+        yield return new WaitForSeconds(buttonAnimationDelay);
+        ChangeScreen(targetPanel);
+        screenChangeCoroutine = null;
+    }
+
+    private void ChangeScreen(GameObject targetPanel)
+    {
+        mainMenuPanel.SetActive(targetPanel == mainMenuPanel);
+        aboutPanel.SetActive(targetPanel == aboutPanel);
+        scannerHUD.SetActive(targetPanel == scannerHUD);
     }
 }
