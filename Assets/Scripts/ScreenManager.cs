@@ -10,6 +10,7 @@ public class ScreenManager : MonoBehaviour
 
     public void ShowMainMenu()
     {
+        Debug.Log("game started");
         mainMenuPanel.SetActive(true);
         aboutPanel.SetActive(false);
         scannerHUD.SetActive(false);
@@ -24,6 +25,7 @@ public class ScreenManager : MonoBehaviour
 
     public void ShowAbout()
     {
+        Debug.Log("about button clicked");
         mainMenuPanel.SetActive(false);
         aboutPanel.SetActive(true);
         scannerHUD.SetActive(false);
