@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(CombinationTable))]
 public class CombinationManager : MonoBehaviour
 {
     [Header("Info Popup")]
@@ -12,21 +13,22 @@ public class CombinationManager : MonoBehaviour
     public TextMeshProUGUI popupBody;
     public Button closeButton;
 
-    private Combination currentCombo;
+    private ReactionData currentReaction;
     [Header("UI")]
     public TextMeshProUGUI feedbackText;
     public static CombinationManager Instance;
 
-    [Header("Configure all valid combinations here")]
-    public List<Combination> combinations = new();
+    [Header("Reaction Lookup")]
+    public CombinationTable combinationTable;
 
     private readonly Dictionary<ElementType, Transform> active = new();
     private GameObject currentResult;
-    private string currentPairKey = "";
+    private int currentPairKey = -1;
 
     void Awake()
     {
         Instance = this;
+        if (combinationTable == null) combinationTable = GetComponent<CombinationTable>();
         if (infoButton != null) infoButton.onClick.AddListener(OpenPopup);
         if (closeButton != null) closeButton.onClick.AddListener(ClosePopup);
         if (infoButton != null) infoButton.gameObject.SetActive(false);
@@ -41,30 +43,32 @@ public class CombinationManager : MonoBehaviour
         if (active.Count != 2) { ClearResult(); return; }
 
         var keys = new List<ElementType>(active.Keys);
-        string pairKey = PairKey(keys[0], keys[1]);
+        int pairKey = CombinationTable.PairKey(keys[0], keys[1]);
         if (pairKey == currentPairKey) return;
 
         ClearResult();
         currentPairKey = pairKey;
 
-        var combo = FindCombination(keys[0], keys[1]);
-        // inside Evaluate(), after FindCombination:
-        if (combo == null)
+        var reaction = combinationTable != null ? combinationTable.Resolve(keys[0], keys[1]) : null;
+        if (reaction == null)
         {
-            currentCombo = null;
+            currentReaction = null;
             if (infoButton != null) infoButton.gameObject.SetActive(false);
-            ShowFeedback("Elemen-elemen ini tidak bergabung menjadi sesuatu yang baru.");
+            string inertMessage = combinationTable != null
+                ? combinationTable.GetInertMessage(keys[0], keys[1])
+                : "Tidak ada perubahan wujud.";
+            ShowFeedback(inertMessage);
             return;
         }
 
-        currentCombo = combo;
+        currentReaction = reaction;
         if (infoButton != null) infoButton.gameObject.SetActive(true);
 
         Vector3 mid = Midpoint();
-        if (combo.resultPrefab != null)
-            currentResult = Instantiate(combo.resultPrefab, mid, Quaternion.identity);
+        if (reaction.effectPrefab != null)
+            currentResult = Instantiate(reaction.effectPrefab, mid, Quaternion.identity);
 
-        ShowFeedback(combo.resultName);
+        ShowFeedback(reaction.resultName);
     }
 
     void ShowFeedback(string msg)
@@ -83,8 +87,8 @@ public class CombinationManager : MonoBehaviour
     {
         if (currentResult != null) Destroy(currentResult);
         currentResult = null;
-        currentPairKey = "";
-        currentCombo = null;
+        currentPairKey = -1;
+        currentReaction = null;
         HideFeedback();
         if (infoButton != null) infoButton.gameObject.SetActive(false);
         if (infoPopup != null) infoPopup.SetActive(false);
@@ -100,9 +104,9 @@ public class CombinationManager : MonoBehaviour
 
     void OpenPopup()
     {
-        if (currentCombo == null || infoPopup == null) return;
-        popupTitle.text = currentCombo.resultName;
-        popupBody.text  = currentCombo.explanation;
+        if (currentReaction == null || infoPopup == null) return;
+        popupTitle.text = currentReaction.resultName;
+        popupBody.text = BuildPopupBody(currentReaction);
         infoPopup.SetActive(true);
     }
 
@@ -117,13 +121,16 @@ public class CombinationManager : MonoBehaviour
         return (active[keys[0]].position + active[keys[1]].position) * 0.5f;
     }
 
-    Combination FindCombination(ElementType a, ElementType b)
+    string BuildPopupBody(ReactionData reaction)
     {
-        foreach (var c in combinations)
-            if (c.Matches(a, b)) return c;
-        return null;
-    }
+        string body = reaction.explanation;
 
-    string PairKey(ElementType a, ElementType b)
-        => a < b ? $"{a}_{b}" : $"{b}_{a}";
+        if (!string.IsNullOrWhiteSpace(reaction.everydayExample))
+            body += $"\n\nContoh: {reaction.everydayExample}";
+
+        if (reaction.kalor != KalorDir.None)
+            body += $"\nKalor: {reaction.kalor}";
+
+        return body;
+    }
 }

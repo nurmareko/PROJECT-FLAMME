@@ -1850,6 +1850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829667729}
   - component: {fileID: 829667728}
+  - component: {fileID: 829667730}
   m_Layer: 0
   m_Name: Combination Manager
   m_TagString: Untagged
@@ -1875,63 +1876,20 @@ MonoBehaviour:
   popupBody: {fileID: 1884631655}
   closeButton: {fileID: 1595510624}
   feedbackText: {fileID: 2111349278}
-  combinations:
-  - elementA: 0
-    elementB: 1
-    resultName: Uap
-    explanation: "Saat air dipanaskan, air berubah menjadi uap \u2014 gas yang berisi
-      tetesan air kecil di udara. Proses ini disebut penguapan."
-    resultPrefab: {fileID: 3736977348899088329, guid: ee8081a47bd6cb1528155c53eac1f74f,
-      type: 3}
-  - elementA: 0
-    elementB: 2
-    resultName: Lahar
-    explanation: Panas yang sangat tinggi dapat melelehkan batu padat menjadi lava
-      cair. Ketika lava mendingin, lava akan mengeras menjadi batuan beku baru.
-    resultPrefab: {fileID: 2243177891237033210, guid: 236dc0072751c9c639f5cc4fe9aa0850,
-      type: 3}
-  - elementA: 0
-    elementB: 3
-    resultName: Tornado Api
-    explanation: Saat api bertemu dengan angin kuat yang berputar, api dapat membentuk
-      kolom api yang berputar. Fenomena nyata ini disebut pusaran api.
-    resultPrefab: {fileID: 7075986561276526749, guid: 2b98dff790db1423c907556d02aada9a,
-      type: 3}
-  - elementA: 0
-    elementB: 4
-    resultName: Abu
-    explanation: Ketika tanaman terbakar, api menguraikannya menjadi bubuk abu-abu
-      lembut yang disebut abu. Abu dapat mengembalikan nutrisi ke tanah.
-    resultPrefab: {fileID: 8794139404063816738, guid: 830f1e24e90a736f9bfc49e108013cc8,
-      type: 3}
-  - elementA: 1
-    elementB: 2
-    resultName: Lumpur
-    explanation: Saat air bercampur dengan tanah, air mengisi ruang di antara partikel
-      tanah, sehingga terbentuk lumpur yang lembut dan basah.
-    resultPrefab: {fileID: 6485002588018696519, guid: 4881b5c13ffbb57d295d6b78cec2882e,
-      type: 3}
-  - elementA: 1
-    elementB: 3
-    resultName: Gelumbang
-    explanation: Saat angin bertiup di atas permukaan air, angin mendorong permukaan
-      tersebut dan menciptakan gelombang. Semakin kuat anginnya, semakin besar gelombangnya.
-    resultPrefab: {fileID: 2095340625350273121, guid: 4a181ca4af902fe74a5e19d8cb7dc788,
-      type: 3}
-  - elementA: 1
-    elementB: 4
-    resultName: Tumbuh
-    explanation: Tanaman membutuhkan air untuk tumbuh. Saat biji mendapatkan air,
-      biji mulai berkecambah dan menumbuhkan batang serta daun kecil pertamanya.
-    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
-      type: 3}
-  - elementA: 2
-    elementB: 4
-    resultName: Pohon
-    explanation: Dengan tanah yang subur untuk tumbuh, tanaman dapat tumbuh tinggi
-      dan kuat menjadi pohon. Tanah menyediakan nutrisi dan menopang akar tanaman.
-    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
-      type: 3}
+  combinationTable: {fileID: 829667730}
+--- !u!114 &829667730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829667727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fb52fa566f13b54a03c1268f3449d7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::CombinationTable
+  reactions: []
 --- !u!4 &829667729
 Transform:
   m_ObjectHideFlags: 0
