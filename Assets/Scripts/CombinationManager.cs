@@ -48,15 +48,25 @@ public class CombinationManager : MonoBehaviour
         currentPairKey = pairKey;
 
         var combo = FindCombination(keys[0], keys[1]);
-        // inside Evaluate(), after FindCombination:
+
         if (combo == null)
         {
-            currentCombo = null;
-            if (infoButton != null) infoButton.gameObject.SetActive(false);
-            ShowFeedback("Elemen-elemen ini tidak bergabung menjadi sesuatu yang baru.");
+            ShowFeedback("Tidak ada perubahan wujud.");
             return;
         }
 
+        if (!combo.IsReaction)
+        {
+            currentCombo = null;
+            if (infoButton != null) infoButton.gameObject.SetActive(false);
+            string msg = string.IsNullOrEmpty(combo.inertMessage)
+                        ? "Tidak ada perubahan wujud."
+                        : combo.inertMessage;
+            ShowFeedback(msg);
+            return;
+        }
+
+        // Valid reaction
         currentCombo = combo;
         if (infoButton != null) infoButton.gameObject.SetActive(true);
 
@@ -64,7 +74,7 @@ public class CombinationManager : MonoBehaviour
         if (combo.resultPrefab != null)
             currentResult = Instantiate(combo.resultPrefab, mid, Quaternion.identity);
 
-        ShowFeedback(combo.resultName);
+        ShowFeedback(combo.perubahanName);
     }
 
     void ShowFeedback(string msg)
@@ -92,7 +102,6 @@ public class CombinationManager : MonoBehaviour
 
     void Update()
     {
-        // keep the result floating between the cards as they move/jitter
         if (currentResult != null && active.Count == 2)
             currentResult.transform.position = Midpoint();
     }
@@ -101,7 +110,7 @@ public class CombinationManager : MonoBehaviour
     void OpenPopup()
     {
         if (currentCombo == null || infoPopup == null) return;
-        popupTitle.text = currentCombo.resultName;
+        popupTitle.text = currentCombo.perubahanName;
         popupBody.text  = currentCombo.explanation;
         infoPopup.SetActive(true);
     }

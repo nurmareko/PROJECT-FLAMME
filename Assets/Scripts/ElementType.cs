@@ -1,1 +1,9 @@
-public enum ElementType { Fire, Water, Earth, Wind, Plant }
+public enum ElementType
+{
+    Panas,
+    Dingin,
+    Es,
+    Air,
+    Uap,
+    KapurBarus
+}
