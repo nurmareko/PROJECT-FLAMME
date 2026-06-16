@@ -9,14 +9,13 @@ public class Combination
     public ElementType elementA;
     public ElementType elementB;
 
-    [Header("Reaction (leave prefab empty for inert pairs)")]
-    public string perubahanName;          // "Mencair", "Menguap", etc.
-    public KalorDirection kalor = KalorDirection.None;
-    public GameObject resultPrefab;       // null = inert pair
+    [Header("Display")]
+    public string perubahanName;   // For reactions: "Mencair". For inert: "Berenang Bersama"
+    public KalorDirection kalor = KalorDirection.None;  // None for inert pairs
+    public GameObject resultPrefab; // null = inert pair (no AR effect)
 
-    [Header("Info / Feedback Text")]
-    [TextArea(3, 6)] public string explanation;   // for Info popup
-    [TextArea(2, 4)] public string inertMessage;  // for inert pairs only
+    [Header("Info Popup")]
+    [TextArea(3, 6)] public string explanation;  // Science explanation OR "Cerita Serunya"
 
     public bool IsReaction => resultPrefab != null;
 

@@ -1364,7 +1364,7 @@ MonoBehaviour:
     elementB: 3
     perubahanName: Membeku
     kalor: 2
-    resultPrefab: {fileID: 8794139404063816738, guid: 830f1e24e90a736f9bfc49e108013cc8,
+    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
     explanation: 'Kalau air dimasukkan ke tempat super dingin, energi panasnya hilang.
       Pasukan air yang tadinya bebas bergerak jadi kedinginan, lalu mereka berpelukan
@@ -1375,22 +1375,31 @@ MonoBehaviour:
       batu yang keras dan segar!'
     inertMessage: 
   - elementA: 1
-    elementB: 2
-    perubahanName: 
-    kalor: 0
-    resultPrefab: {fileID: 6485002588018696519, guid: 4881b5c13ffbb57d295d6b78cec2882e,
+    elementB: 4
+    perubahanName: Mengembun
+    kalor: 2
+    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
-    explanation: Saat air bercampur dengan tanah, air mengisi ruang di antara partikel
-      tanah, sehingga terbentuk lumpur yang lembut dan basah.
+    explanation: 'Waktu uap gas yang terbang-terbang menyentuh benda yang dingin,
+      mereka kaget dan kedinginan! Mereka pun berkumpul lagi dan berubah jadi titik-titik
+      air.
+
+
+      Contoh: Coba lihat bagian luar gelas es tehmu, pasti basah banyak
+      butiran airnya, kan? Itulah embun!'
     inertMessage: 
-  - elementA: 1
-    elementB: 3
-    perubahanName: 
-    kalor: 0
+  - elementA: 2
+    elementB: 4
+    perubahanName: Mengkristal
+    kalor: 2
     resultPrefab: {fileID: 2095340625350273121, guid: 4a181ca4af902fe74a5e19d8cb7dc788,
       type: 3}
-    explanation: Saat angin bertiup di atas permukaan air, angin mendorong permukaan
-      tersebut dan menciptakan gelombang. Semakin kuat anginnya, semakin besar gelombangnya.
+    explanation: 'Uap gas di udara menyentuh tempat yang sangat amat dingin. Saking
+      dinginnya, mereka langsung beku jadi es padat tanpa sempat jadi air dulu.
+
+
+      Contoh:
+      "Bunga es" putih yang menempel tebal di dinding freezer kulkasmu!'
     inertMessage: 
   - elementA: 1
     elementB: 4
