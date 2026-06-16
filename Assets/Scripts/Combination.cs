@@ -10,12 +10,12 @@ public class Combination
     public ElementType elementB;
 
     [Header("Display")]
-    public string perubahanName;   // For reactions: "Mencair". For inert: "Berenang Bersama"
-    public KalorDirection kalor = KalorDirection.None;  // None for inert pairs
-    public GameObject resultPrefab; // null = inert pair (no AR effect)
+    public string perubahanName;
+    public KalorDirection kalor = KalorDirection.None;
+    public GameObject resultPrefab;
 
     [Header("Info Popup")]
-    [TextArea(3, 6)] public string explanation;  // Science explanation OR "Cerita Serunya"
+    [TextArea(3, 6)] public string explanation;
 
     public bool IsReaction => resultPrefab != null;
 

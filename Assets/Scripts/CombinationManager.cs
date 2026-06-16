@@ -55,24 +55,17 @@ public class CombinationManager : MonoBehaviour
             return;
         }
 
-        if (!combo.IsReaction)
-        {
-            currentCombo = null;
-            if (infoButton != null) infoButton.gameObject.SetActive(false);
-            string msg = string.IsNullOrEmpty(combo.inertMessage)
-                        ? "Tidak ada perubahan wujud."
-                        : combo.inertMessage;
-            ShowFeedback(msg);
-            return;
-        }
-
-        // Valid reaction
+        // Every listed pair gets a banner + Info button.
         currentCombo = combo;
         if (infoButton != null) infoButton.gameObject.SetActive(true);
 
-        Vector3 mid = Midpoint();
-        if (combo.resultPrefab != null)
-            currentResult = Instantiate(combo.resultPrefab, mid, Quaternion.identity);
+        // Only reactions spawn a 3D result.
+        if (combo.IsReaction)
+        {
+            Vector3 mid = Midpoint();
+            if (combo.resultPrefab != null)
+                currentResult = Instantiate(combo.resultPrefab, mid, Quaternion.identity);
+        }
 
         ShowFeedback(combo.perubahanName);
     }
