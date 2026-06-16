@@ -1316,61 +1316,100 @@ MonoBehaviour:
   feedbackText: {fileID: 0}
   combinations:
   - elementA: 0
-    elementB: 1
-    resultName: Uap
-    explanation: "Saat air dipanaskan, air berubah menjadi uap \u2014 gas yang berisi
-      tetesan air kecil di udara. Proses ini disebut penguapan."
-    resultPrefab: {fileID: 3736977348899088329, guid: ee8081a47bd6cb1528155c53eac1f74f,
-      type: 3}
-  - elementA: 0
     elementB: 2
-    resultName: Lahar
-    explanation: Panas yang sangat tinggi dapat melelehkan batu padat menjadi lava
-      cair. Ketika lava mendingin, lava akan mengeras menjadi batuan beku baru.
-    resultPrefab: {fileID: 2243177891237033210, guid: 236dc0072751c9c639f5cc4fe9aa0850,
+    perubahanName: Mencair
+    kalor: 1
+    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
+    explanation: 'Bayangkan es batu itu sekumpulan pasukan kecil yang berpegangan
+      tangan erat. Waktu kena panas, mereka dapat energi buat lompat-lompat! Akhirnya
+      pegangan lepas dan tadaa, esnya meleleh jadi air.
+
+
+      Contoh: Es batu yang
+      berenang dan hilang di gelas teh hangatmu!
+
+      Contoh: Es batu yang berenang
+      dan hilang di gelas teh hangatmu!'
+    inertMessage: 
   - elementA: 0
     elementB: 3
-    resultName: Tornado Api
-    explanation: Saat api bertemu dengan angin kuat yang berputar, api dapat membentuk
-      kolom api yang berputar. Fenomena nyata ini disebut pusaran api.
-    resultPrefab: {fileID: 7075986561276526749, guid: 2b98dff790db1423c907556d02aada9a,
+    perubahanName: Menguap
+    kalor: 1
+    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
+    explanation: 'Karena airnya kepanasan, pasukan air ini berlari makin kencang
+      sampai terbang ke udara jadi uap gas!
+
+
+      Contoh: Air yang mendidih di
+      panci, atau baju basah yang dijemur di bawah matahari lalu tiba-tiba jadi kering
+      karena airnya terbang jalan-jalan ke langit.'
+    inertMessage: 
   - elementA: 0
-    elementB: 4
-    resultName: Abu
-    explanation: Ketika tanaman terbakar, api menguraikannya menjadi bubuk abu-abu
-      lembut yang disebut abu. Abu dapat mengembalikan nutrisi ke tanah.
+    elementB: 5
+    perubahanName: Menyublim
+    kalor: 1
+    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
+      type: 3}
+    explanation: 'Seperti sulap! Kapur barus yang padat bisa langsung berubah jadi
+      gas tanpa harus meleleh jadi air dulu saat kena udara hangat.
+
+
+      Contoh:
+      Kapur barus di lemari bajumu yang tiba-tiba menghilang mengecil, tapi bajumu
+      jadi wangi!'
+    inertMessage: 
+  - elementA: 1
+    elementB: 3
+    perubahanName: Membeku
+    kalor: 2
     resultPrefab: {fileID: 8794139404063816738, guid: 830f1e24e90a736f9bfc49e108013cc8,
       type: 3}
+    explanation: 'Kalau air dimasukkan ke tempat super dingin, energi panasnya hilang.
+      Pasukan air yang tadinya bebas bergerak jadi kedinginan, lalu mereka berpelukan
+      erat-erat sampai kaku.
+
+
+      Contoh: Air di freezer yang berubah jadi es
+      batu yang keras dan segar!'
+    inertMessage: 
   - elementA: 1
     elementB: 2
-    resultName: Lumpur
-    explanation: Saat air bercampur dengan tanah, air mengisi ruang di antara partikel
-      tanah, sehingga terbentuk lumpur yang lembut dan basah.
+    perubahanName: 
+    kalor: 0
     resultPrefab: {fileID: 6485002588018696519, guid: 4881b5c13ffbb57d295d6b78cec2882e,
       type: 3}
+    explanation: Saat air bercampur dengan tanah, air mengisi ruang di antara partikel
+      tanah, sehingga terbentuk lumpur yang lembut dan basah.
+    inertMessage: 
   - elementA: 1
     elementB: 3
-    resultName: Gelumbang
-    explanation: Saat angin bertiup di atas permukaan air, angin mendorong permukaan
-      tersebut dan menciptakan gelombang. Semakin kuat anginnya, semakin besar gelombangnya.
+    perubahanName: 
+    kalor: 0
     resultPrefab: {fileID: 2095340625350273121, guid: 4a181ca4af902fe74a5e19d8cb7dc788,
       type: 3}
+    explanation: Saat angin bertiup di atas permukaan air, angin mendorong permukaan
+      tersebut dan menciptakan gelombang. Semakin kuat anginnya, semakin besar gelombangnya.
+    inertMessage: 
   - elementA: 1
     elementB: 4
-    resultName: Tumbuh
+    perubahanName: 
+    kalor: 0
+    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
+      type: 3}
     explanation: Tanaman membutuhkan air untuk tumbuh. Saat biji mendapatkan air,
       biji mulai berkecambah dan menumbuhkan batang serta daun kecil pertamanya.
-    resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
-      type: 3}
+    inertMessage: 
   - elementA: 2
     elementB: 4
-    resultName: Pohon
-    explanation: Dengan tanah yang subur untuk tumbuh, tanaman dapat tumbuh tinggi
-      dan kuat menjadi pohon. Tanah menyediakan nutrisi dan menopang akar tanaman.
+    perubahanName: 
+    kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
+    explanation: Dengan tanah yang subur untuk tumbuh, tanaman dapat tumbuh tinggi
+      dan kuat menjadi pohon. Tanah menyediakan nutrisi dan menopang akar tanaman.
+    inertMessage: 
 --- !u!4 &829667729
 Transform:
   m_ObjectHideFlags: 0
