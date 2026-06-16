@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="back_card" size="1.000000 1.414427" />
+    <ImageTarget name="camphor_card" size="1.000000 1.414427" />
+    <ImageTarget name="water_card" size="1.000000 1.414427" />
+    <ImageTarget name="cold_card" size="1.000000 1.414427" />
+    <ImageTarget name="heat_card" size="1.000000 1.414427" />
+    <ImageTarget name="ice_card" size="1.000000 1.414427" />
+    <ImageTarget name="gas_card" size="1.000000 1.414427" />
+  </Tracking>
+</QCARConfig>
