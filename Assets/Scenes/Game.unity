@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431bcebebc5dad07e8544b099918798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementCard
-  element: 3
+  element: 5
 --- !u!114 &354680744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431bcebebc5dad07e8544b099918798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementCard
-  element: 3
+  element: 0
 --- !u!114 &631260978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,8 +1047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScreenManager
   mainMenuPanel: {fileID: 2026902244}
-  aboutPanel: {fileID: 0}
-  scannerHUD: {fileID: 0}
+  aboutPanel: {fileID: 1226760585}
+  scannerHUD: {fileID: 777682222}
   buttonAnimationDelay: 0.33
 --- !u!4 &723656668
 Transform:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431bcebebc5dad07e8544b099918798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementCard
-  element: 3
+  element: 1
 --- !u!114 &804543398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,7 +1335,7 @@ MonoBehaviour:
     elementB: 3
     perubahanName: Menguap
     kalor: 1
-    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
+    resultPrefab: {fileID: 6177088330674757900, guid: eca5815a1d0737be1b062c03962bb765,
       type: 3}
     explanation: 'Karena airnya kepanasan, pasukan air ini berlari makin kencang
       sampai terbang ke udara jadi uap gas!
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431bcebebc5dad07e8544b099918798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementCard
-  element: 3
+  element: 4
 --- !u!114 &1774589429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431bcebebc5dad07e8544b099918798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementCard
-  element: 3
+  element: 2
 --- !u!114 &1792076048
 MonoBehaviour:
   m_ObjectHideFlags: 0
