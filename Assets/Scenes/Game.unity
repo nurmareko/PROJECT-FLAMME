@@ -1321,158 +1321,121 @@ MonoBehaviour:
     kalor: 1
     resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
-    explanation: 'Bayangkan es batu itu sekumpulan pasukan kecil yang berpegangan
-      tangan erat. Waktu kena panas, mereka dapat energi buat lompat-lompat! Akhirnya
-      pegangan lepas dan tadaa, esnya meleleh jadi air.
-
-
-      Contoh: Es batu yang
-      berenang dan hilang di gelas teh hangatmu!
-
-      Contoh: Es batu yang berenang
-      dan hilang di gelas teh hangatmu!'
+    explanation: "Es krim terkena panas! Pasukan kecil di dalamnya menerima kalor,
+      bergerak makin cepat, lalu tadaa \u2014 bentuk padatnya lumer menjadi cair."
   - elementA: 0
     elementB: 3
     perubahanName: Menguap
     kalor: 1
     resultPrefab: {fileID: 6177088330674757900, guid: eca5815a1d0737be1b062c03962bb765,
       type: 3}
-    explanation: 'Karena airnya kepanasan, pasukan air ini berlari makin kencang
-      sampai terbang ke udara jadi uap gas!
-
-
-      Contoh: Air yang mendidih di
-      panci, atau baju basah yang dijemur di bawah matahari lalu tiba-tiba jadi kering
-      karena airnya terbang jalan-jalan ke langit.'
+    explanation: Air kena panas dan pasukan airnya jadi super aktif! Karena menerima
+      kalor, sebagian air berubah dari cair menjadi uap gas yang naik ke udara.
   - elementA: 0
     elementB: 5
     perubahanName: Menyublim
     kalor: 1
-    resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
+    resultPrefab: {fileID: 6177088330674757900, guid: 46bf80967ea04f4c553a1a82bf0d428c,
       type: 3}
-    explanation: 'Seperti sulap! Kapur barus yang padat bisa langsung berubah jadi
-      gas tanpa harus meleleh jadi air dulu saat kena udara hangat.
-
-
-      Contoh:
-      Kapur barus di lemari bajumu yang tiba-tiba menghilang mengecil, tapi bajumu
-      jadi wangi!'
+    explanation: Kapur barus punya trik sulap sendiri! Saat menerima kalor, ia langsung
+      berubah dari padat menjadi gas tanpa mampir jadi cair dulu.
   - elementA: 1
     elementB: 3
     perubahanName: Membeku
     kalor: 2
     resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
-    explanation: 'Kalau air dimasukkan ke tempat super dingin, energi panasnya hilang.
-      Pasukan air yang tadinya bebas bergerak jadi kedinginan, lalu mereka berpelukan
-      erat-erat sampai kaku.
-
-
-      Contoh: Air di freezer yang berubah jadi es
-      batu yang keras dan segar!'
+    explanation: Air masuk dunia dingin! Pasukan air melepas kalor, geraknya melambat,
+      lalu mereka berpelukan rapat sampai berubah dari cair menjadi es padat.
   - elementA: 1
     elementB: 4
     perubahanName: Mengembun
     kalor: 2
     resultPrefab: {fileID: 4529928820643098828, guid: ef3893c3de8394f7987ca5e5f9314769,
       type: 3}
-    explanation: 'Waktu uap gas yang terbang-terbang menyentuh benda yang dingin,
-      mereka kaget dan kedinginan! Mereka pun berkumpul lagi dan berubah jadi titik-titik
-      air.
-
-
-      Contoh: Coba lihat bagian luar gelas es tehmu, pasti basah banyak
-      butiran airnya, kan? Itulah embun!'
+    explanation: Uap ketemu dingin dan mulai berkumpul lagi! Saat melepas kalor,
+      pasukan uap berubah dari gas menjadi titik-titik air kecil.
   - elementA: 2
     elementB: 4
     perubahanName: Mengkristal
     kalor: 2
-    resultPrefab: {fileID: 2095340625350273121, guid: 4a181ca4af902fe74a5e19d8cb7dc788,
+    resultPrefab: {fileID: 6177088330674757900, guid: b94eab9025a4770834d7706f4c9d4b90,
       type: 3}
-    explanation: 'Uap gas di udara menyentuh tempat yang sangat amat dingin. Saking
-      dinginnya, mereka langsung beku jadi es padat tanpa sempat jadi air dulu.
-
-
-      Contoh:
-      "Bunga es" putih yang menempel tebal di dinding freezer kulkasmu!'
+    explanation: Uap menyentuh tempat super dingin! Karena melepas kalor dengan cepat,
+      ia langsung berubah dari gas menjadi kristal es.
   - elementA: 2
     elementB: 3
-    perubahanName: Berenang Bersama
+    perubahanName: Belum Berubah!
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: 'Walau es dicelupkan ke air, wujudnya tidak langsung berubah. Tapi
-      ada keajaiban: es bisa mengapung! Itu karena saat air membeku jadi es, pasukan
-      air merenggangkan tangannya, bikin tubuh es jadi lebih "ringan" dari air.'
+    explanation: 'Es dan air masih santai di wujudnya masing-masing. Tapi ada fakta
+      keren: es bisa mengapung karena susunan partikelnya lebih renggang dari air
+      cair.'
   - elementA: 0
     elementB: 1
-    perubahanName: Berbagi Pelukan
+    perubahanName: Kalor Berpindah!
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: 'Energi panas itu sangat baik hati! Kalau benda panas bertemu benda
-      dingin, si panas akan memberikan energinya ke si dingin sampai suhu mereka
-      berdua jadi sama rata. (Contoh: Air panas dicampur air es jadi air hangat!)'
+    explanation: Tidak ada perubahan wujud, tapi si panas sedang berbagi energi ke
+      si dingin. Kalor mengalir sampai suhu mereka pelan-pelan jadi seimbang.
   - elementA: 0
     elementB: 4
-    perubahanName: Makin Ngebut!
+    perubahanName: Uap Makin Gesit!
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Uap yang sudah berbentuk gas tidak akan berubah wujud lagi. Tapi
-      karena diberi panas, pasukan uap ini malah dapat tambahan energi untuk terbang
-      dan berlarian makin kencang!
+    explanation: Uap sudah berbentuk gas, jadi saat diberi panas lagi ia tidak berubah
+      wujud baru. Pasukan uapnya cuma makin cepat berlarian di udara.
   - elementA: 1
     elementB: 2
-    perubahanName: Makin Menggigil
+    perubahanName: Es Tetap Es!
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Es itu kan sudah beku dan padat. Kalau dia ditaruh di tempat yang
-      lebih dingin lagi, wujudnya tetap saja padat. Pasukan es di dalamnya cuma jadi
-      makin kedinginan dan makin kaku!
+    explanation: Es sudah menjadi padat, jadi saat bertemu dingin lagi wujudnya tidak
+      berubah. Pasukan esnya hanya makin rapat, kaku, dan adem.
   - elementA: 1
     elementB: 5
-    perubahanName: Cuek Bebek
+    perubahanName: Kapur Barus Diam Dulu
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Kapur barus butuh udara hangat/panas untuk bisa menghilang (menyublim).
-      Jadi, kalau dia ditaruh di tempat dingin, dia santai saja dan tetap jadi benda
-      padat yang keras.
+    explanation: Kapur barus butuh kalor untuk menyublim. Kalau bertemu dingin, ia
+      tetap menjadi benda padat dan belum berubah menjadi gas.
   - elementA: 3
     elementB: 4
-    perubahanName: Hanya Papasan
+    perubahanName: Cair dan Gas Bertemu
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Pasukan air diam di bawah, sedangkan pasukan uap asyik terbang di
-      atasnya. Mereka hanya saling sapa dan lewat, tanpa ada yang berubah wujud.
+    explanation: Air diam sebagai cair, uap melayang sebagai gas. Mereka saling lewat,
+      tapi belum ada perubahan kalor yang cukup untuk mengubah wujud.
   - elementA: 3
     elementB: 5
-    perubahanName: Kapur Barus Mandi
+    perubahanName: Cuma Jadi Basah!
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Kalau kapur barus nyemplung ke air biasa, tidak ada sulap perubahan
-      wujud yang terjadi. Kapur barusnya cuma jadi basah!
+    explanation: Kapur barus bertemu air, tapi tidak langsung berubah wujud. Ia tetap
+      padat, hanya mungkin jadi basah seperti habis nyemplung.
   - elementA: 2
     elementB: 5
-    perubahanName: Dua Benda Keras
+    perubahanName: Dua Benda Padat
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Es batu dan kapur barus itu sama-sama padat. Kalau disatukan, mereka
-      cuma bersebelahan seperti dua balok mainan yang sedang berdampingan. Nggak
-      ada yang berubah!
+    explanation: Es dan kapur barus sama-sama padat. Mereka cuma berdampingan seperti
+      dua balok kecil, tanpa perubahan wujud.
   - elementA: 4
     elementB: 5
-    perubahanName: Seperti Angin Lewat
+    perubahanName: Sekadar Berpapasan
     kalor: 0
     resultPrefab: {fileID: 3325768912813339877, guid: 38cc87ccfa10ee0c2849db6f1499c0c6,
       type: 3}
-    explanation: Uap air yang terbang melayang cuma akan melewati si kapur barus.
-      Kapur barusnya diam saja dan wujud mereka berdua tetap sama seperti semula.
+    explanation: Uap melayang melewati kapur barus, tapi belum membuatnya berubah.
+      Uap tetap gas, kapur barus tetap padat.
 --- !u!4 &829667729
 Transform:
   m_ObjectHideFlags: 0
@@ -2765,74 +2728,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059306504}
   m_CullTransparentMesh: 1
---- !u!1001 &113100227773007304
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6177088330674757900, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_Name
-      value: Evaporate
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.03002
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.23438
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.67593
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154356380314228684, guid: eca5815a1d0737be1b062c03962bb765,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eca5815a1d0737be1b062c03962bb765, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2849,4 +2744,3 @@ SceneRoots:
   - {fileID: 1610972789}
   - {fileID: 1304470444}
   - {fileID: 723656668}
-  - {fileID: 113100227773007304}
