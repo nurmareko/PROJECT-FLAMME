@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class ScreenManager : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject aboutPanel;
     public GameObject scannerHUD;
-    [SerializeField] private float buttonAnimationDelay = 0.33f;
+    [SerializeField] private float buttonAnimationDelay = 0.45f;
 
     private Coroutine screenChangeCoroutine;
 
@@ -31,12 +32,31 @@ public class ScreenManager : MonoBehaviour
 
     private void StartDelayedScreenChange(GameObject targetPanel)
     {
+        PlaySelectedButtonPressAnimation();
+
         if (screenChangeCoroutine != null)
         {
             StopCoroutine(screenChangeCoroutine);
         }
 
         screenChangeCoroutine = StartCoroutine(ChangeScreenAfterDelay(targetPanel));
+    }
+
+    private void PlaySelectedButtonPressAnimation()
+    {
+        GameObject selectedButton = EventSystem.current != null
+            ? EventSystem.current.currentSelectedGameObject
+            : null;
+
+        if (selectedButton == null || !selectedButton.TryGetComponent(out Animator animator))
+        {
+            return;
+        }
+
+        animator.ResetTrigger("Normal");
+        animator.ResetTrigger("Highlighted");
+        animator.ResetTrigger("Selected");
+        animator.SetTrigger("Pressed");
     }
 
     private IEnumerator ChangeScreenAfterDelay(GameObject targetPanel)
