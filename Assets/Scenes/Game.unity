@@ -479,8 +479,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ac3dbede310f4564bb6e421abebcf5e9, type: 2}
+  m_sharedMaterial: {fileID: 1707594800557169221, guid: ac3dbede310f4564bb6e421abebcf5e9,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -504,8 +505,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68
-  m_fontSizeBase: 68
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1345,8 +1346,9 @@ MonoBehaviour:
   m_text: 'Es dan air masih santai di wujudnya masing-masing. Tapi ada fakta keren:
     es bisa mengapung karena susunan partikelnya lebih renggang dari air cair.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ac3dbede310f4564bb6e421abebcf5e9, type: 2}
+  m_sharedMaterial: {fileID: 1707594800557169221, guid: ac3dbede310f4564bb6e421abebcf5e9,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1859,6 +1861,7 @@ MonoBehaviour:
   popupTitle: {fileID: 1078706613}
   popupBody: {fileID: 603307330}
   closeButton: {fileID: 1650038107}
+  popupButtonAnimationDelay: 0.45
   feedbackText: {fileID: 257833264}
   combinations:
   - elementA: 0
@@ -2105,8 +2108,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mencair
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ac3dbede310f4564bb6e421abebcf5e9, type: 2}
+  m_sharedMaterial: {fileID: 1707594800557169221, guid: ac3dbede310f4564bb6e421abebcf5e9,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2130,8 +2134,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2503,7 +2507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1591227385
 RectTransform:
   m_ObjectHideFlags: 0
