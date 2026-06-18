@@ -173,6 +173,12 @@ public class CombinationManager : MonoBehaviour
         return null;
     }
 
+    void OnDisable()
+    {
+        ClearResult();
+        active.Clear();
+    }
+
     string PairKey(ElementType a, ElementType b)
         => a < b ? $"{a}_{b}" : $"{b}_{a}";
 }

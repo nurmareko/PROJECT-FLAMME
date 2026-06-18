@@ -7,6 +7,7 @@ public class ScreenManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject aboutPanel;
     public GameObject scannerHUD;
+    [SerializeField] private CombinationManager combinationManager;
     [SerializeField] private float buttonAnimationDelay = 0.45f;
 
     private Coroutine screenChangeCoroutine;
@@ -71,5 +72,8 @@ public class ScreenManager : MonoBehaviour
         mainMenuPanel.SetActive(targetPanel == mainMenuPanel);
         aboutPanel.SetActive(targetPanel == aboutPanel);
         scannerHUD.SetActive(targetPanel == scannerHUD);
+
+        if (combinationManager != null)
+            combinationManager.enabled = (targetPanel == scannerHUD);
     }
 }
