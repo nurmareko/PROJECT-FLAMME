@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
@@ -11,8 +13,10 @@ public class CombinationManager : MonoBehaviour
     public TextMeshProUGUI popupTitle;
     public TextMeshProUGUI popupBody;
     public Button closeButton;
+    [SerializeField] private float popupButtonAnimationDelay = 0.45f;
 
     private Combination currentCombo;
+    private Coroutine closePopupCoroutine;
     [Header("UI")]
     public TextMeshProUGUI feedbackText;
     public static CombinationManager Instance;
@@ -108,6 +112,12 @@ public class CombinationManager : MonoBehaviour
     void OpenPopup()
     {
         if (currentCombo == null || infoPopup == null) return;
+        if (closePopupCoroutine != null)
+        {
+            StopCoroutine(closePopupCoroutine);
+            closePopupCoroutine = null;
+        }
+
         popupTitle.text = currentCombo.perubahanName;
         popupBody.text  = currentCombo.explanation;
         infoPopup.SetActive(true);
@@ -115,7 +125,39 @@ public class CombinationManager : MonoBehaviour
 
     void ClosePopup()
     {
+        PlaySelectedButtonPressAnimation();
+
+        if (closePopupCoroutine != null)
+        {
+            StopCoroutine(closePopupCoroutine);
+        }
+
+        closePopupCoroutine = StartCoroutine(ClosePopupAfterDelay());
+    }
+
+    IEnumerator ClosePopupAfterDelay()
+    {
+        yield return new WaitForSeconds(popupButtonAnimationDelay);
+
         if (infoPopup != null) infoPopup.SetActive(false);
+        closePopupCoroutine = null;
+    }
+
+    void PlaySelectedButtonPressAnimation()
+    {
+        GameObject selectedButton = EventSystem.current != null
+            ? EventSystem.current.currentSelectedGameObject
+            : null;
+
+        if (selectedButton == null || !selectedButton.TryGetComponent(out Animator animator))
+        {
+            return;
+        }
+
+        animator.ResetTrigger("Normal");
+        animator.ResetTrigger("Highlighted");
+        animator.ResetTrigger("Selected");
+        animator.SetTrigger("Pressed");
     }
 
     Vector3 Midpoint()
