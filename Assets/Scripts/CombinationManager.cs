@@ -31,6 +31,11 @@ public class CombinationManager : MonoBehaviour
         if (closeButton != null) closeButton.onClick.AddListener(ClosePopup);
         if (infoButton != null) infoButton.gameObject.SetActive(false);
         if (infoPopup != null) infoPopup.SetActive(false);
+        if (feedbackText != null)
+        {
+            feedbackText.text = "";
+            feedbackText.gameObject.SetActive(false);
+        }
     }
 
     public void CardDetected(ElementType e, Transform t) { active[e] = t; Evaluate(); }

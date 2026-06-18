@@ -879,7 +879,6 @@ GameObject:
   - component: {fileID: 354680745}
   - component: {fileID: 354680744}
   - component: {fileID: 354680743}
-  - component: {fileID: 354680747}
   m_Layer: 0
   m_Name: Camphor Card
   m_TagString: Untagged
@@ -970,7 +969,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 354680747}
+  mPreview: {fileID: 0}
 --- !u!4 &354680746
 Transform:
   m_ObjectHideFlags: 0
@@ -986,25 +985,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354680747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354680741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 354680745}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: camphor_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 354680745}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &377102499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1415,6 @@ GameObject:
   - component: {fileID: 631260979}
   - component: {fileID: 631260978}
   - component: {fileID: 631260977}
-  - component: {fileID: 631260981}
   m_Layer: 0
   m_Name: Heat Card
   m_TagString: Untagged
@@ -1526,7 +1505,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 631260981}
+  mPreview: {fileID: 0}
 --- !u!4 &631260980
 Transform:
   m_ObjectHideFlags: 0
@@ -1542,25 +1521,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &631260981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631260975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 631260979}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: heat_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 631260979}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &723656666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1659,6 @@ GameObject:
   - component: {fileID: 804543399}
   - component: {fileID: 804543398}
   - component: {fileID: 804543397}
-  - component: {fileID: 804543401}
   m_Layer: 0
   m_Name: Cold Card
   m_TagString: Untagged
@@ -1790,7 +1749,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 804543401}
+  mPreview: {fileID: 0}
 --- !u!4 &804543400
 Transform:
   m_ObjectHideFlags: 0
@@ -1806,25 +1765,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &804543401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804543395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 804543399}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: cold_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 804543399}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &829667727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,7 +2837,6 @@ GameObject:
   - component: {fileID: 1774589430}
   - component: {fileID: 1774589429}
   - component: {fileID: 1774589428}
-  - component: {fileID: 1774589432}
   m_Layer: 0
   m_Name: Gas Card
   m_TagString: Untagged
@@ -2988,7 +2927,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1774589432}
+  mPreview: {fileID: 0}
 --- !u!4 &1774589431
 Transform:
   m_ObjectHideFlags: 0
@@ -3004,25 +2943,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1774589432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774589426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1774589430}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: gas_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 1774589430}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &1792076045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +2955,6 @@ GameObject:
   - component: {fileID: 1792076049}
   - component: {fileID: 1792076048}
   - component: {fileID: 1792076047}
-  - component: {fileID: 1792076051}
   m_Layer: 0
   m_Name: Ice Card
   m_TagString: Untagged
@@ -3126,7 +3045,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1792076051}
+  mPreview: {fileID: 0}
 --- !u!4 &1792076050
 Transform:
   m_ObjectHideFlags: 0
@@ -3142,25 +3061,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1792076051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792076045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1792076049}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: ice_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 1792076049}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &1910279338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,7 +3073,6 @@ GameObject:
   - component: {fileID: 1910279342}
   - component: {fileID: 1910279341}
   - component: {fileID: 1910279340}
-  - component: {fileID: 1910279344}
   m_Layer: 0
   m_Name: Water Card
   m_TagString: Untagged
@@ -3264,7 +3163,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1910279344}
+  mPreview: {fileID: 0}
 --- !u!4 &1910279343
 Transform:
   m_ObjectHideFlags: 0
@@ -3280,25 +3179,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1910279344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910279338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1910279342}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: water_card
-  mDatasetName: Vuforia/fullcard_alchemist_ar_v3.xml
-  mCastedBehaviour: {fileID: 1910279342}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &1975068641
 GameObject:
   m_ObjectHideFlags: 0
